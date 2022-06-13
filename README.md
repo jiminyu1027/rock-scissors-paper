@@ -2,7 +2,9 @@
 
 가위, 바위, 보 중에 하나를 선택하여 컴퓨터와 대결하는 게임 
 
-- Demo : []()
+![제목을 입력해주세요_-006](https://user-images.githubusercontent.com/92264611/173422595-8c9ca167-8a7d-49d9-88f3-c613bf7ae1e9.png)
+
+- Demo : [https://rock-scissors-paper-jm.netlify.app/](https://rock-scissors-paper-jm.netlify.app/)
 
 ## 개발 목표
 
