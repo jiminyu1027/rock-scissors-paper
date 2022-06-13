@@ -45,23 +45,27 @@ function App() {
   };
 
   const judgement = (user, computer) => {
+    //user가 선택한값, computer가 선택한 값을 넘겨서 이겼는지 졌는지 판단하는 함수
     console.log("유저가 선택한 값:", user, " / 컴퓨터가 선택한 값:", computer);
-    if (user.name == computer.name){
-      return "TIE"
-    }else if(user.name == "Rock"){
-      return computer.name == "Scissors"?"WIN":"LOSE"
-    }else if(user.name == "Scissors"){
-      return computer.name == "Paper"?"WIN":"LOSE"
-    }else if(user.name == "Paper"){
-      return computer.name == "Rock"?"WIN":"LOSE"
+    if (user.name == computer.name) { //user가 선택한 값과 computer가 선택한 값이 일치하면,
+      return "TIE"; //"TIE" 비겼다는 결과를 리턴해준다.
+    } else if (user.name == "Rock") { //user가 바위을 선택했을때,
+      return computer.name == "Scissors" ? "WIN" : "LOSE";
+      //computer가 가위를 선택했다면? "WIN"을 보를 선택했다면? "LOSE"를 리턴한다.
+    } else if (user.name == "Scissors") { //user가 가위를 선택했을때,
+      return computer.name == "Paper" ? "WIN" : "LOSE";
+      //computer가 보를 선택했다면? "WIN"을 바위를 선택했다면? "LOSE"를 리턴한다.
+    } else if (user.name == "Paper") { //user가 보를 선택했을때,
+      return computer.name == "Rock" ? "WIN" : "LOSE";
+      //computer가 바위를 선택했다면? "WIN"을 가위를 선택했다면? "LOSE"를 리턴한다.
     }
   };
 
   return (
     <div>
       <div className="main">
-        <Box title="You" item={userSelect} result={result}/>
-        <Box title="Computer" item={computerSelect} result={result}/>
+        <Box title="You" item={userSelect} result={result} />
+        <Box title="Computer" item={computerSelect} result={result} />
       </div>
       <div className="main">
         <button onClick={() => play("rock")}>
